@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    transition: .5s;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    gap: 20px;
+}
+.box{
+    width: 50px;
+    height: 50px;
+    border: 5px solid aqua;
+    box-shadow: 0 0 10px aqua, 0 0 10px aqua inset;
+    border-radius: 5px;
+    animation-name: loading;
+
+    animation: 2s loading ease-in-out infinite;
+}
+
+.fa-star{
+    color: aqua;
+    text-shadow: 8px 8px 8px aqua inset;
+    position: absolute;
+    left: 28%;
+    top: 30%;
+}
+@keyframes loading {
+    0%{
+        /* transform: rotateY(-180deg); */
+        transform: rotate3d(1, 1, 0, 360deg)
+    }
+    50%{
+        transform: rotate3d(0, 1, 1, 360deg)
+    }
+}
+h2{
+    color: aqua;
+}
